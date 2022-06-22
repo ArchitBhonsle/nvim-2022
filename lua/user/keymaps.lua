@@ -15,4 +15,3 @@ keyset('n', '<A-Down>', ':resize -2<CR>')
 -- better indentation
 keyset('v', '<', '<gv')
 keyset('v', '>', '>gv')
-

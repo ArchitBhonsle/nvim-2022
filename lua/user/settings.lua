@@ -1,10 +1,4 @@
-local cache_path = function(path)
-	local cache_dir = vim.env.XDG_CACHE_HOME .. '/nvim';
-	if path ~= nil then
-    cache_dir = cache_dir .. path
-	end
-	return cache_dir
-end
+local cache_dir = vim.fn.stdpath('cache')
 
 local options = {
   cmdheight = 2, -- more lines for the command-line
@@ -30,8 +24,8 @@ local options = {
   timeoutlen = 500, -- time to wait for a mapped sequence to complete
   swapfile = false, -- disable swap files
   undofile = true, -- enable persistent undo
-  undodir = cache_path('/undo'), -- all the undofiles are places here
-  shadafile = cache_path('/shada'), -- path to the shada file
+  undodir = cache_dir .. '/undo', -- all the undofiles are places here
+  shadafile = cache_dir .. '/shada', -- path to the shada file
   updatetime = 300, -- faster completion
   number = true, -- set numbered lines
   relativenumber = true, -- set relative numbered lines
@@ -40,6 +34,7 @@ local options = {
   wrap = false, -- display lines as one long line
   scrolloff = 15, -- minimal number of screen lines to keep above and below the cursor.
   sidescrolloff = 10, -- minimal number of screen lines to keep left and right of the cursor.
+  list = true, -- helps in visualising invisible characters
 }
 
 for k, v in pairs(options) do
@@ -49,4 +44,6 @@ end
 vim.opt.shortmess:append('cI')
 vim.opt.whichwrap:append('<,>,[,]')
 
-vim.g.mapleader = ' ';
+vim.opt.listchars:append('eol:↴')
+
+vim.g.mapleader = ' '
