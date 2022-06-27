@@ -9,9 +9,10 @@ require('packer').startup(function(use)
   }
 
   use { 'catppuccin/nvim', as = 'catppuccin' }
+  use('folke/which-key.nvim')
   use { 'kyazdani42/nvim-tree.lua', tag = 'nightly' }
   use('nvim-lualine/lualine.nvim')
-  use('folke/which-key.nvim')
+  use('akinsho/bufferline.nvim')
 
   use('L3MON4D3/LuaSnip')
   use('rafamadriz/friendly-snippets')
@@ -29,6 +30,7 @@ require('packer').startup(function(use)
   use('JoosepAlviste/nvim-ts-context-commentstring')
   use('p00f/nvim-ts-rainbow')
 
+  use('ggandor/lightspeed.nvim')
   use('windwp/nvim-autopairs')
   use('numToStr/Comment.nvim')
   use('lukas-reineke/indent-blankline.nvim')

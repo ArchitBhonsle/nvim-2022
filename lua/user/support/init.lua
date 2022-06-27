@@ -1,3 +1,4 @@
+require('user.support.lightspeed')
 require('user.support.autopairs')
 require('user.support.comment')
 require('user.support.indent-blankline')

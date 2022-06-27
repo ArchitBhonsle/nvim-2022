@@ -4,7 +4,7 @@ catppuccin.setup {
   integrations = {
     indent_blankline = {
       enabled = true,
-      -- colored_indent_levels = true,
+      colored_indent_levels = true,
     },
     ts_rainbow = true,
   },

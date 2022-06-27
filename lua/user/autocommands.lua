@@ -4,7 +4,20 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   group = 'user',
   desc = 'Format the file on save',
   callback = function()
-    vim.lsp.buf.formatting_sync()
+    local null_ls_client = nil
+    for _, client in ipairs(vim.lsp.buf_get_clients()) do
+      if client.name == 'null-ls' then
+        null_ls_client = client
+        break
+      end
+    end
+
+    if null_ls_client == nil then
+      vim.lsp.buf.formatting_sync()
+    else
+      local params = vim.lsp.util.make_formatting_params {}
+      null_ls_client.request('textDocument/formatting', params, nil, vim.api.nvim_get_current_buf())
+    end
   end,
 })
 

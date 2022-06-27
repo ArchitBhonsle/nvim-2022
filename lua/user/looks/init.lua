@@ -1,0 +1,5 @@
+require('user.looks.catppuccin')
+require('user.looks.which-key')
+require('user.looks.nvimtree')
+require('user.looks.lualine')
+require('user.looks.bufferline')
