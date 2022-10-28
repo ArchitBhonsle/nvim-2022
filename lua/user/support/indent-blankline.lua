@@ -1,4 +1,4 @@
-local colors = require('catppuccin.api.colors').get_colors()
+local colors = require("catppuccin.palettes").get_palette()
 
 vim.cmd('highlight IndentBlanklineIndentBg1 guibg=' .. colors.base .. ' gui=nocombine')
 vim.cmd('highlight IndentBlanklineIndentBg2 guibg=' .. colors.mantle .. ' gui=nocombine')
@@ -10,13 +10,5 @@ require('indent_blankline').setup {
   space_char_highlight_list = {
     'IndentBlanklineIndentBg1',
     'IndentBlanklineIndentBg2',
-  },
-  char_highlight_list = {
-    'IndentBlanklineIndent1',
-    'IndentBlanklineIndent2',
-    'IndentBlanklineIndent3',
-    'IndentBlanklineIndent4',
-    'IndentBlanklineIndent5',
-    'IndentBlanklineIndent6',
   },
 }
