@@ -1,14 +1,14 @@
 local catppuccin = require('catppuccin')
 
-catppuccin.setup {
-  integrations = {
-    indent_blankline = {
-      enabled = true,
-      colored_indent_levels = true,
-    },
-    ts_rainbow = true,
-  },
-}
+catppuccin.setup({
+	integrations = {
+		indent_blankline = {
+			enabled = true,
+			colored_indent_levels = true,
+		},
+		ts_rainbow = true,
+	},
+})
 
 vim.cmd('colorscheme catppuccin')
 

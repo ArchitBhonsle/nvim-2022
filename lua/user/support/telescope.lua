@@ -1,31 +1,23 @@
-require("which-key").register({
+require('which-key').register({
 	f = {
-		function()
-			require("telescope.builtin").find_files()
-		end,
-		"Find Files",
+		function() require('telescope.builtin').find_files() end,
+		'Find Files',
 	},
 	F = {
-		name = "Find",
+		name = 'Find',
 		g = {
-			function()
-				require("telescope.builtin").live_grep()
-			end,
-			"Live Grep",
+			function() require('telescope.builtin').live_grep() end,
+			'Live Grep',
 		},
 		b = {
-			function()
-				require("telescope.builtin").buffers()
-			end,
-			"Buffers",
+			function() require('telescope.builtin').buffers() end,
+			'Buffers',
 		},
 		h = {
-			function()
-				require("telescope.builtin").help_tags()
-			end,
-			"Help Tags",
+			function() require('telescope.builtin').help_tags() end,
+			'Help Tags',
 		},
 	},
 }, {
-	prefix = "<Leader>",
+	prefix = '<Leader>',
 })
