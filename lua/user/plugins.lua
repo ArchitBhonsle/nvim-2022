@@ -28,11 +28,13 @@ require('packer').startup(function(use)
 	use('hrsh7th/cmp-path')
 	use('saadparwaiz1/cmp_luasnip')
 	use('jose-elias-alvarez/null-ls.nvim')
+	use('simrat39/rust-tools.nvim')
 
 	-- treesitter
 	use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
 	use('JoosepAlviste/nvim-ts-context-commentstring')
 	use('p00f/nvim-ts-rainbow')
+	use('nvim-treesitter/nvim-treesitter-textobjects')
 
 	-- support
 	use({
@@ -40,6 +42,7 @@ require('packer').startup(function(use)
 		config = function() require('auto-session').setup() end,
 	})
 	use('nvim-telescope/telescope.nvim')
+	use('kylechui/nvim-surround')
 	use('phaazon/hop.nvim')
 	use('windwp/nvim-autopairs')
 	use('numToStr/Comment.nvim')

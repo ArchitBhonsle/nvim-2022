@@ -35,7 +35,7 @@ local on_attach = function(client, bufnr)
 end
 
 local servers = {
-	'rust_analyzer', -- rust-analyzer
+	-- 'rust_analyzer', -- rust-analyzer || REMOVED in favour of the rust-tools plugins
 	'sumneko_lua', -- lua-language-server
 	'gopls', -- gopls
 	'pylsp', -- python-lsp-server

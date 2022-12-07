@@ -1,4 +1,5 @@
 require('user.support.autopairs')
+require('user.support.surround')
 require('user.support.colorizer')
 require('user.support.comment')
 require('user.support.hop')
