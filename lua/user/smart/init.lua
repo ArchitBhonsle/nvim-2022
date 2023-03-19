@@ -1,5 +1,7 @@
 require('user.smart.diagnostics')
+require('user.smart.mason')
 require('user.smart.lsp')
 require('user.smart.null-ls')
+require('user.smart.debugging')
 require('user.smart.snippets')
 require('user.smart.treesitter')

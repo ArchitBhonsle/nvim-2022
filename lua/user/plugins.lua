@@ -20,6 +20,10 @@ require('packer').startup(function(use)
 	use('L3MON4D3/LuaSnip')
 	use('rafamadriz/friendly-snippets')
 
+	-- mason
+	use('williamboman/mason.nvim')
+	use('williamboman/mason-lspconfig.nvim')
+
 	-- lsp
 	use('neovim/nvim-lspconfig')
 	use('hrsh7th/nvim-cmp')
@@ -29,6 +33,9 @@ require('packer').startup(function(use)
 	use('saadparwaiz1/cmp_luasnip')
 	use('jose-elias-alvarez/null-ls.nvim')
 	use('simrat39/rust-tools.nvim')
+	use('RRethy/vim-illuminate')
+
+	-- dap
 
 	-- treesitter
 	use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })

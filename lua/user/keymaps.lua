@@ -15,3 +15,10 @@ keyset('n', '<C-Down>', ':resize -2<CR>')
 -- better indentation
 keyset('v', '<', '<gv')
 keyset('v', '>', '>gv')
+
+-- quickfix list
+keyset('n', '<LEADER>]', ':cnext<CR>')
+keyset('n', '<LEADER>[', ':cprev<CR>')
+-- location list
+keyset('n', '<LEADER>}', ':cnext<CR>')
+keyset('n', '<LEADER>{', ':cprev<CR>')

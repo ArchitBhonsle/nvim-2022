@@ -20,28 +20,25 @@ require('nvim-treesitter.configs').setup({
 			swap_next = {
 				['<C-s>'] = '@parameter.inner',
 			},
-			swap_previous = {
-				['<Ctrl-S>'] = '@parameter.inner',
-			},
 		},
 		move = {
 			enable = true,
 			set_jumps = true,
 			goto_next_start = {
-				[']m'] = '@function.outer',
-				[']]'] = { query = '@class.outer', desc = 'Next class start' },
+				[']c'] = { query = '@class.outer', desc = 'Next class start' },
+				[']f'] = { query = '@function.outer', desc = 'Next function start' },
 			},
 			goto_next_end = {
-				[']M'] = '@function.outer',
-				[']['] = '@class.outer',
+				[']C'] = { query = '@class.outer', desc = 'Next class end' },
+				[']F'] = { query = '@function.outer', desc = 'Next function end' },
 			},
 			goto_previous_start = {
-				['[m'] = '@function.outer',
-				['[['] = '@class.outer',
+				['[c'] = { query = '@class.outer', desc = 'Previous class start' },
+				['[f'] = { query = '@function.outer', desc = 'Previous function start' },
 			},
 			goto_previous_end = {
-				['[M'] = '@function.outer',
-				['[]'] = '@class.outer',
+				['[C'] = { query = '@class.outer', desc = 'Previous class start' },
+				['[F'] = { query = '@function.outer', desc = 'Previous function start' },
 			},
 		},
 	},

@@ -3,8 +3,9 @@ local cache_dir = vim.fn.stdpath('cache')
 local options = {
 	cmdheight = 2, -- more lines for the command-line
 	completeopt = { 'menuone', 'preview', 'noselect' }, -- set the options
-	foldmethod = 'expr', -- set the method for folding
-	foldexpr = 'nvim_treesitter#foldexpr()', -- using treesitter for folding
+	-- foldmethod = 'expr', -- set the method for folding NOT WORKING AS EXPECTED
+	-- foldexpr = 'nvim_treesitter#foldexpr()', -- using treesitter for folding
+	foldmethod = 'indent', -- most reliable
 	foldlevel = 10, -- keep folds of at least 10 depth open
 	ignorecase = true, -- makes the search case insensitive
 	smartcase = true, -- makes the search case sensitive for capital letters
@@ -48,3 +49,6 @@ vim.opt.whichwrap:append('<,>,[,]')
 vim.opt.listchars:append('eol:↴')
 
 vim.g.mapleader = ' '
+vim.g.markdown_fenced_languages = { -- for denols codefences
+	'ts=typescript',
+}

@@ -3,8 +3,8 @@ local rt = require('rust-tools')
 rt.setup({
 	tools = {
 		inlay_hints = {
-			parameter_hints_prefix = '<~ ',
-			other_hints_prefix = '~> ',
+			parameter_hints_prefix = '  ',
+			other_hints_prefix = '  ',
 		},
 	},
 	server = {
