@@ -45,7 +45,6 @@ end
 
 vim.opt.shortmess:append('cI')
 vim.opt.whichwrap:append('<,>,[,]')
-
 vim.opt.listchars:append('eol:↴')
 
 vim.g.mapleader = ' '

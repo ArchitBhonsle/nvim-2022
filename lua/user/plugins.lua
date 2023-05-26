@@ -43,6 +43,9 @@ require('packer').startup(function(use)
 	use('p00f/nvim-ts-rainbow')
 	use('nvim-treesitter/nvim-treesitter-textobjects')
 
+	-- git
+	use({ 'ruifm/gitlinker.nvim', config = function() require('gitlinker').setup() end })
+
 	-- support
 	use({
 		'rmagatti/auto-session',
